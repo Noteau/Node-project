@@ -1,18 +1,18 @@
 const inquirer = require('inquirer')
-const ask = function ask() {
-	inquirer.prompt([
+const ask = () => {
+    return new Promise(resolve => {
+    inquirer.prompt([
 	{
-		type:'checkbox',
+		type:'confirm',
 		message:'Voulez vous sauvegarder le contenu récupéré ?',
-		name: 'Answer',
-		choices: [
-		'Oui',
-		'Non'
-		]
+		name: 'answer',
 	}
 	]).then((answer)=>{
-		console.log(answers)
+		resolve(answer)
+	}).catch((e)=>{
+		resolve("nope")
 	})
+  });
 }
 
 module.exports = ask

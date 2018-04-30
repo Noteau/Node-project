@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-const program = require('commander')
-const ask = require('./functions/ask_register')
-
+const program = require("commander")
+const ask = require("./functions/ask_register")
 
 program
 	.version('1.0.0')
@@ -16,30 +15,36 @@ program
 
 program.parse(process.argv)
 
-if(program.champions){
-	try
-ask()
-}
-else if(program.champion){
+async function main(){
+	if(program.champions){
+		ask()
+		.then((answer) => {
+			console.log(answer)
+		})
+		
+	}
+	else if(program.champion){
 
-}
-else if(program.items){
+	}
+	else if(program.items){
 
-}
-else if(program.item){
+	}
+	else if(program.item){
 
-}
-else if(program.summoner_spells){
+	}
+	else if(program.summoner_spells){
 
-}
-else if(program.summonerSpell){
+	}
+	else if(program.summonerSpell){
 
+	}
+	else if(program.summonerInfo){
+	console.log('summoner-info')
+	}
+	else if(program.summonerHistorical){
+	console.log('summoner-info')
+	}else{
+		program.help()
+	}
 }
-else if(program.summonerInfo){
-console.log('summoner-info')
-}
-else if(program.summonerHistorical){
-console.log('summoner-info')
-}else{
-	program.help()
-}
+main()
