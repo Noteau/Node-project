@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const program = require("commander")
 const ask = require("./functions/ask_register")
+const blablou = require("./functions/getAllChampionsName")
 
 program
 	.version('1.0.0')
@@ -20,6 +21,11 @@ async function main(){
 		ask()
 		.then((answer) => {
 			console.log(answer)
+			return blablou()
+		})
+		.then((number) => {
+			console.log(number)
+			return number
 		})
 		
 	}
