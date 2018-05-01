@@ -1,0 +1,132 @@
+{
+    "type": "summoner",
+    "version": "8.8.2",
+    "data": {
+        "SummonerSiegeChampSelect2": {
+            "id": 34,
+            "summonerLevel": 1,
+            "name": "Emplacement d'arme de siège",
+            "key": "SummonerSiegeChampSelect2",
+            "description": "En mode Siège du Nexus, les sorts d'invocateur sont remplacés par des emplacements d'arme de siège. Dépensez des Éclats de cristal pour acheter des armes de siège à usage unique dans la boutique, puis utilisez les touches des sorts d'invocateur pour les activer !"
+        },
+        "SummonerTeleport": {
+            "id": 12,
+            "summonerLevel": 7,
+            "name": "Téléportation",
+            "key": "SummonerTeleport",
+            "description": "Après 4,5 secondes de canalisation, votre champion est téléporté près du bâtiment, du sbire ou de la balise alliés ciblés."
+        },
+        "SummonerSiegeChampSelect1": {
+            "id": 33,
+            "summonerLevel": 1,
+            "name": "Emplacement d'arme de siège",
+            "key": "SummonerSiegeChampSelect1",
+            "description": "En mode Siège du Nexus, les sorts d'invocateur sont remplacés par des emplacements d'arme de siège. Dépensez des Éclats de cristal pour acheter des armes de siège à usage unique dans la boutique, puis utilisez les touches des sorts d'invocateur pour les activer !"
+        },
+        "SummonerExhaust": {
+            "id": 3,
+            "summonerLevel": 4,
+            "name": "Fatigue",
+            "key": "SummonerExhaust",
+            "description": "Épuise le champion ennemi ciblé, réduisant sa vitesse de déplacement de 30% et les dégâts qu'il inflige de 40% pendant 2,5 sec."
+        },
+        "SummonerBarrier": {
+            "id": 21,
+            "summonerLevel": 4,
+            "name": "Barrière",
+            "key": "SummonerBarrier",
+            "description": "Protège votre champion contre 115-455 pts de dégâts (selon le niveau du champion) pendant 2 secondes."
+        },
+        "SummonerMana": {
+            "id": 13,
+            "summonerLevel": 6,
+            "name": "Clarté",
+            "key": "SummonerMana",
+            "description": "Rend 50% de son mana max à votre champion. Rend aussi 25% de leur mana max aux alliés proches."
+        },
+        "SummonerSnowURFSnowball_Mark": {
+            "id": 39,
+            "summonerLevel": 6,
+            "name": "Marquage ultra (rudement froid)",
+            "key": "SummonerSnowURFSnowball_Mark",
+            "description": "C'est une boule de neige ! C'est un Poro ! C'est... euh... un machin."
+        },
+        "SummonerFlash": {
+            "id": 4,
+            "summonerLevel": 7,
+            "name": "Saut éclair",
+            "key": "SummonerFlash",
+            "description": "Téléporte votre champion sur une courte distance vers l'emplacement de votre curseur."
+        },
+        "SummonerSnowball": {
+            "id": 32,
+            "summonerLevel": 6,
+            "name": "Marquage",
+            "key": "SummonerSnowball",
+            "description": "Lancez une boule de neige en ligne droite. Si elle touche un ennemi, celui-ci est marqué, vous obtenez une vision pure de cet ennemi et votre champion peut foncer vers lui."
+        },
+        "SummonerDot": {
+            "id": 14,
+            "summonerLevel": 9,
+            "name": "Embrasement",
+            "key": "SummonerDot",
+            "description": "Inflige 80-505 pts de dégâts bruts (selon le niveau du champion) en 5 sec à un champion ennemi, permet de voir la cible et réduit les effets des soins dont elle bénéficie pendant la durée de l'effet."
+        },
+        "SummonerDarkStarChampSelect2": {
+            "id": 36,
+            "summonerLevel": 1,
+            "name": "Sorts d'invocateur désactivés",
+            "key": "SummonerDarkStarChampSelect2",
+            "description": "Les sorts d'invocateur sont désactivés dans ce mode."
+        },
+        "SummonerDarkStarChampSelect1": {
+            "id": 35,
+            "summonerLevel": 1,
+            "name": "Sorts d'invocateur désactivés",
+            "key": "SummonerDarkStarChampSelect1",
+            "description": "Les sorts d'invocateur sont désactivés dans ce mode."
+        },
+        "SummonerPoroRecall": {
+            "id": 30,
+            "summonerLevel": 1,
+            "name": "Au roi !",
+            "key": "SummonerPoroRecall",
+            "description": "Rendez-vous rapidement près du roi des Poros."
+        },
+        "SummonerHaste": {
+            "id": 6,
+            "summonerLevel": 1,
+            "name": "Fantôme",
+            "key": "SummonerHaste",
+            "description": "Votre champion augmente sa vitesse de déplacement et peut traverser les unités pendant 10 sec. Octroie un maximum de 28-45% (selon le niveau du champion) de vitesse de déplacement après avoir accéléré pendant 2 sec."
+        },
+        "SummonerHeal": {
+            "id": 7,
+            "summonerLevel": 1,
+            "name": "Soins",
+            "key": "SummonerHeal",
+            "description": "Rend 90-345 PV (selon le niveau du champion) à votre champion et au champion allié ciblé et augmente de 30% vos vitesses de déplacement pendant 1 sec. Ce soin est divisé par deux sur les unités récemment touchées par le sort d'invocateur Soins."
+        },
+        "SummonerPoroThrow": {
+            "id": 31,
+            "summonerLevel": 1,
+            "name": "Jet de Poro",
+            "key": "SummonerPoroThrow",
+            "description": "Lancez un Poro sur vos ennemis. S'il touche une cible, vous pouvez vous rendre rapidement près de la cible."
+        },
+        "SummonerBoost": {
+            "id": 1,
+            "summonerLevel": 9,
+            "name": "Purge",
+            "key": "SummonerBoost",
+            "description": "Dissipe toutes les entraves (sauf les neutralisations et les projections en l'air) et tous les effets de sorts d'invocateur qui affectent votre champion, en plus de réduire de 65% la durée des nouveaux effets entravants subis pendant 3 sec."
+        },
+        "SummonerSmite": {
+            "id": 11,
+            "summonerLevel": 9,
+            "name": "Châtiment",
+            "key": "SummonerSmite",
+            "description": "Inflige 390-1000 pts de dégâts bruts (selon le niveau du champion) au monstre épique, au grand monstre, au monstre moyen ou au sbire ennemi ciblé. Châtiment vous rend des PV en fonction de vos PV max quand il est utilisé sur des monstres."
+        }
+    }
+}
