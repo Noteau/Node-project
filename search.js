@@ -30,17 +30,14 @@ program.parse(process.argv)
 
 function main(){
 	if (!fs.existsSync('./JSONs/liste_champion.json/')) {
-		console.log('tamere1')
 			console.log('\nFichier de ressource champions introuvable, lancement automatique de la mise à jour des données')
 			update_champions()
 	};
 	if (!fs.existsSync('./JSONs/liste_items.json/')) {
-		console.log('tamere2')
 			console.log('\nFichier de ressource items introuvable, lancement automatique de la mise à jour des données')
 			update_items()
 	};
 	if (!fs.existsSync('./JSONs/liste_summoner_spell.json/')) {
-		console.log('tamere3')
 			console.log("\nFichier de ressource sort d'invocateur introuvable, lancement automatique de la mise à jour des données")
 			update_summoner_spells()
 	};
@@ -203,7 +200,6 @@ function main(){
 
 const update_items = () => {
     return new Promise(function(resolve, reject) {
-    	console.log('https://euw1.api.riotgames.com/lol/static-data/v3/items?locale=fr_FR&api_key='+api_key)
     	axios.get('https://euw1.api.riotgames.com/lol/static-data/v3/items?locale=fr_FR&api_key='+api_key)
 			.then(function (items) {
 				var items_json = JSON.stringify(items.data)
