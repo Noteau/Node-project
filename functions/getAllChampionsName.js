@@ -18,7 +18,7 @@ const getAllChampionsName = () => {
             resolve(all_data)
         }
         else{
-            reject("Nous n'avons pas pu trouvé vos champions. Une erreur est survenue ?")
+            reject("Nous n'avons pas pu trouvé vos champions. Une erreur est survenue.")
         }
     }
 )};

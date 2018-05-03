@@ -1,13 +1,26 @@
 const fs = require('fs');
 
 const getAllSummonerName = () => {
-    return new Promise(resolve => {
+    return new Promise(function(resolve, reject) {
+    	all_data=[]
+    	one_data=[]
         let rawdata = fs.readFileSync('./functions/liste_summoner_spell.json');  
         let Summoner_spells = JSON.parse(rawdata);
-      	console.log("Pour la version "+Summoner_spells.version+" de League of Legends les sorts d'invocateurs sont :\n")
+        all_data.push(Summoner_spells.version)
         for (summoner_spell in Summoner_spells.data) {
-            console.log("Nom du sort d'invocateur : "+ Summoner_spells.data[summoner_spell]["name"]+"\nCe sort est débloqué au niveau "+Summoner_spells.data[summoner_spell]["summonerLevel"]+"\nNuméro du sort d'invocateur : "+Summoner_spells.data[summoner_spell]["id"]+"\nDescription : "+Summoner_spells.data[summoner_spell]["description"]+"\n")
+        	one_data.push(Summoner_spells.data[summoner_spell]["name"])
+        	one_data.push(Summoner_spells.data[summoner_spell]["summonerLevel"])
+        	one_data.push(Summoner_spells.data[summoner_spell]["id"])
+        	one_data.push(Summoner_spells.data[summoner_spell]["description"])
+        	all_data.push(one_data)
+        	one_data=[]
         }
+        if (all_data.length >0) {
+            resolve(all_data)
+        }
+        else{
+        	reject("Nous n'avons pas pu trouvé vos sorts d'invocateur. Une erreur est survenue.")
+       	}
     }
 )};
 

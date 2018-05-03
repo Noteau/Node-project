@@ -40,7 +40,9 @@ function main(){
 			*/
 		})
 		.then((data)=>{
-			console.log(data)
+			for (i in data) {
+                console.log("ID : "+data[i][0]+"\nNom du champion : "+data[i][1]+"\nTitre : "+data[i][2]+"\n<------------------------------------>\n")
+            }
 		})
 		.catch((error) => {
 			console.log(error)	
@@ -61,13 +63,19 @@ function main(){
 	else if(program.items){
 		return All_Items_name()
 		.then((data)=>{
-			console.log(data)
+			for (i in data) {
+                console.log("Cet objet porte le numéro "+data[i][0]+"\nNom : "+data[i][1]+"\nDescription : "+data[i][2]+"\n<------------------------------------>\n")
+            }
 		})
 	}
 	else if(program.item){
 		ask_informations('item')
 		.then((id) => {
 			return getOneItemName(id)
+		})
+		.then((data)=>{
+			console.log("\nNom : "+ data[1]+"\nNuméro de l'objet : "+data[0]+"\nUtilité : "+data[2])
+        		
 		})
 		.catch((error) => {
 			console.log(error)	
@@ -79,6 +87,10 @@ function main(){
 			console.log(answer)
 			return All_summoner_spells()
 		})
+		.then((data)=>{
+      		console.log("Pour la version "+data[0]+" de League of Legends les sorts d'invocateurs sont :\n")
+      		console.log(data)
+		})
 		.catch((error) => {
 			console.log(error)	
 		})
@@ -87,6 +99,10 @@ function main(){
 		ask_informations("sort d'invocateur")
 		.then((id) => {
 			return getOneSummonerName(id)
+		})
+		.then((data)=>{
+			console.log("Nom du sort d'invocateur : "+data[0]+"\nCe sort est débloqué au niveau "+data[1]+"\nNuméro du sort d'invocateur : "+data[2]+"\nDescription : "+data[3]+"\n")
+        		
 		})
 		.catch((error) => {
 			console.log(error)	
