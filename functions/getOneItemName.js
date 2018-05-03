@@ -3,7 +3,7 @@ const fs = require('fs');
 const getOneItemName = (id) => {
     return new Promise(function(resolve, reject) {
         data=[]
-        let rawdata = fs.readFileSync("./functions/liste_items.json");  
+        let rawdata = fs.readFileSync("./JSONs/liste_items.json");  
         let Items = JSON.parse(rawdata);
         for (item in Items.data) {
         	if (id["answer"] == Items.data[item]["id"]) {

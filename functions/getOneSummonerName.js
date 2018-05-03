@@ -3,7 +3,7 @@ const fs = require('fs');
 const getOneSumonerName = (id) => {
     return new Promise(function(resolve, reject) {
         data=[]
-        let rawdata = fs.readFileSync("./functions/liste_summoner_spell.json");  
+        let rawdata = fs.readFileSync("./JSONs/liste_summoner_spell.json");  
         let Summoner_spells = JSON.parse(rawdata);
         for (summoner_spell in Summoner_spells.data) {
         	if (id["answer"] == Summoner_spells.data[summoner_spell]["id"]) {

@@ -4,7 +4,7 @@ const getAllSummonerName = () => {
     return new Promise(function(resolve, reject) {
     	all_data=[]
     	one_data=[]
-        let rawdata = fs.readFileSync('./functions/liste_summoner_spell.json');  
+        let rawdata = fs.readFileSync('./JSONs/liste_summoner_spell.json');  
         let Summoner_spells = JSON.parse(rawdata);
         all_data.push(Summoner_spells.version)
         for (summoner_spell in Summoner_spells.data) {

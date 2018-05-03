@@ -4,7 +4,7 @@ const getAllItemsName = () => {
     return new Promise(function(resolve, reject) {
     	one_data=[]
     	all_data=[]
-        let rawdata = fs.readFileSync('./functions/liste_items.json');  
+        let rawdata = fs.readFileSync('./JSONs/liste_items.json');  
         let items = JSON.parse(rawdata);
         for (item in items.data) {
         	one_data.push(items.data[item]["id"])

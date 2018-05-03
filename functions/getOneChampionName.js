@@ -3,7 +3,7 @@ const fs = require('fs');
 const getOneChampionName = (id) => {
     data=[]
     return new Promise(function(resolve, reject) {
-        let rawdata = fs.readFileSync("./functions/liste_champion.json");  
+        let rawdata = fs.readFileSync("./JSONs/liste_champion.json");  
         let Champs = JSON.parse(rawdata);
         for (champ in Champs.data) {
         	if (id["answer"] == Champs.data[champ]["id"]) {

@@ -5,7 +5,7 @@ const getAllChampionsName = () => {
     return new Promise(function(resolve, reject){
     	all_data=[]
     	one_data=[]
-        let rawdata = fs.readFileSync('./functions/liste_champion.json');  
+        let rawdata = fs.readFileSync('./JSONs/liste_champion.json');  
         let Champs = JSON.parse(rawdata);
         for (champ in Champs.data) {
         	one_data.push(Champs.data[champ]["id"])

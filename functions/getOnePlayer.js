@@ -1,14 +1,27 @@
 const axios = require('axios')
 
-const getOnePlayerName = (id) => {
-    return new Promise(resolve => {
-        axios.get('https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/'+id.answer+'?api_key=RGAPI-7dc33f86-dd43-47ee-b862-0b72b646e247')
+const getOnePlayerName = (id, api_key) => {
+    return new Promise(function(resolve, reject){
+        data=[]
+        axios.get('https://euw1.api.riotgames.com/lol/summoner/v3/summoners/by-name/'+id.answer+'?api_key='+api_key)
             .then(function (joueur) {
-                console.log("Le joueur "+joueur.data["name"]+" a l'id  : "+joueur.data["id"]+"\nIl est actuellement niveau "+joueur.data["summonerLevel"]+"\n")
-                axios.get('https://euw1.api.riotgames.com/lol/league/v3/positions/by-summoner/'+joueur.data["id"]+'?api_key=RGAPI-7dc33f86-dd43-47ee-b862-0b72b646e247')
+                data.push(joueur.data["name"])
+                data.push(joueur.data["id"])
+                data.push(joueur.data["summonerLevel"])
+                axios.get('https://euw1.api.riotgames.com/lol/league/v3/positions/by-summoner/'+joueur.data["id"]+'?api_key='+api_key)
                 .then(function (ranks) {
                     for (rank in ranks.data){
-                        console.log("Il est classé "+ranks.data[rank]["tier"]+" "+ranks.data[rank]["rank"]+" avec "+ranks.data[rank]["leaguePoints"]+" points en "+ranks.data[rank]["queueType"])
+                        data.push(ranks.data[rank]["tier"])
+                        data.push(ranks.data[rank]["rank"])
+                        data.push(ranks.data[rank]["leaguePoints"])
+                        data.push(ranks.data[rank]["queueType"])
+                        }
+
+                    if (data.length >0) {
+                        resolve(data)
+                    }
+                    else{
+                        reject("Nous n'avons pas pu trouvé votre invocateur. Vous etes certains d'avoir entré le bon nom ?")
                     }
                 })
                 .catch(function (error) {
