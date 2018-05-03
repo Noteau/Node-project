@@ -8,7 +8,7 @@ Vérifiez que Node est bien installé sur votre ordinateur.
 Tapez enfin "node search.js"
 Une aide s'affiche et vous explique les différentes options : 
 
-   -V, --version                         Affiche la version du programme
+    -V, --version                         Affiche la version du programme
    
     -C,--champions                       Affiche tous les champions du jeu
     
