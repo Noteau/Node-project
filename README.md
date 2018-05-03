@@ -30,4 +30,5 @@ Une aide s'affiche et vous explique les différentes options :
     -h, --help                           Affiche l'aide
     
 Pour lancer correctement le programe il ne reste plus qu'à écrire : node search.js [-nom de l'option voulue]
+
 Pour des raisons techniques la fonction de mise à jour est limité en nombre d'essais par heure. (Limite de 10/h)
