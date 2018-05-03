@@ -6,6 +6,7 @@ Pour l'utiliser il suffit de télécharger le contenu de ce dépôt (ou de le cl
 Une fois le contenu télécharger placez-vous dans le dossier où se trouve le fichier search.js.
 Vérifiez que Node est bien installé sur votre ordinateur.
 Tapez enfin "node search.js"
+
 Une aide s'affiche et vous explique les différentes options : 
 
     -V, --version                         Affiche la version du programme
