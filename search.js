@@ -33,10 +33,14 @@ function main(){
 		ask_save_file()
 		.then((answer) => {
 			console.log(answer.answer)
-			All_Champions_Name()
-			if(answer.answer){
+			return All_Champions_Name()
+			/*if(answer.answer){
 				file_save("Champions","test")
 			}
+			*/
+		})
+		.then((data)=>{
+			console.log(data)
 		})
 		.catch((error) => {
 			console.log(error)	
@@ -47,12 +51,18 @@ function main(){
 		.then((id) => {
 			return getOneChampionName(id)
 		})
+		.then((data)=>{
+			console.log("Champion numéro : "+data[0]+"\nNom : "+ data[1]+"\nTitre : "+data[2]+"\n")
+		})
 		.catch((error) => {
 			console.log(error)	
 		})
 	}
 	else if(program.items){
-		All_Items_name()
+		return All_Items_name()
+		.then((data)=>{
+			console.log(data)
+		})
 	}
 	else if(program.item){
 		ask_informations('item')
