@@ -2,7 +2,7 @@
 
 Bienvenue sur notre programme d'aide sur League of Legends.
 
-Pour l'utiliser il suffit de télécharger le contenu de ce dépôt (ou de le cloner par le lien offert par git)
+Pour l'utiliser il suffit de télécharger le contenu de ce dépôt (ou de le cloner par le lien offert par git) et de générer une clef API (trouable à l'adresse https://developer.riotgames.com/, les clefs n'étant utilisable que 24 heures nous ne pouvons en fournir) que vous insérez à la place de l'api key présente dans le fichier search.js
 Une fois le contenu télécharger placez-vous dans le dossier où se trouve le fichier search.js.
 Vérifiez que Node est bien installé sur votre ordinateur.
 Tapez enfin "node search.js"
